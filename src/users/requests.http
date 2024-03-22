@@ -3,9 +3,24 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "email1@example.com",
+  "email": "email4@example.com",
   "password": "password1"
 }
+
+### Sign in
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "email4@example.com",
+  "password": "password1"
+}
+
+### Who am I
+GET http://localhost:3000/auth/whoami
+
+### Sign out
+POST http://localhost:3000/auth/signout
 
 ### Find a user by id
 GET http://localhost:3000/auth/6
