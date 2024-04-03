@@ -1,0 +1,73 @@
+#######################################################
+### Reports
+#######################################################
+
+### Create a new user
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "password1"
+}
+
+### Sign in
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "password1"
+}
+
+### Who am I
+GET http://localhost:3000/auth/whoami
+
+### Sign out
+POST http://localhost:3000/auth/signout
+
+### Find a user by id
+GET http://localhost:3000/auth/6
+
+### Fina all users
+GET http://localhost:3000/auth?email=email1@example.com
+
+### Remove a user by id
+DELETE http://localhost:3000/auth/7
+
+### Update a user
+PATCH http://localhost:3000/auth/8
+content-type: application/json
+
+{
+  "email": "email8@example.com"
+}
+
+#######################################################
+### Reports
+#######################################################
+
+### Create a new report
+POST http://localhost:3000/reports
+content-type: application/json
+
+{
+  "make": "Toyota",
+  "model": "Corolla",
+  "year": 1997,
+  "mileage": 101325,
+  "lat": -60.1,
+  "lng": -30.5,
+  "price": 37000
+}
+
+### Approve an existing report
+PATCH http://localhost:3000/reports/6
+content-type: application/json
+
+{
+  "approved": true
+}
+
+### Get an estimate for an existing vehicle
+GET http://localhost:3000/reports?make=Toyota&model=Corolla&year=1995&mileage=20000&lat=-61&lng=-32
