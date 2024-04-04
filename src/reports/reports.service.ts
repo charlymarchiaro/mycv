@@ -33,7 +33,7 @@ export class ReportsService {
   }
 
   async changeApproval(id: string, approved: boolean) {
-    const report = await this.repo.findOneBy({id: parseInt(id)})
+    const report = await this.repo.findOne({id: parseInt(id)})
     if (!report) {
       throw new NotFoundException('Report not found');
     }

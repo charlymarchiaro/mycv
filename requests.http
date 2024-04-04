@@ -7,7 +7,7 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "admin@example.com",
+  "email": "user1@example.com",
   "password": "password1"
 }
 
@@ -62,7 +62,7 @@ content-type: application/json
 }
 
 ### Approve an existing report
-PATCH http://localhost:3000/reports/6
+PATCH http://localhost:3000/reports/1
 content-type: application/json
 
 {
